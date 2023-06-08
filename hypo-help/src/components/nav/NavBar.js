@@ -11,6 +11,11 @@ export const NavBar = () => {
           View Chat
         </Link>
       </li>
+      <li className="navbar__item active">
+        <Link className="navbar__link" to="/chatform">
+          Lets talk about it
+        </Link>
+      </li>
       {localStorage.getItem("hypo_user") ? (
         <li className="navbar__item navbar__logout">
           <Link
