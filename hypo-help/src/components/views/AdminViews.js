@@ -1,5 +1,6 @@
 import { Outlet, Route, Routes } from "react-router-dom";
 import { ChatList } from "../Chat/ViewChat";
+import { CreateTip } from "../tips/CreateTip";
 import { TipList } from "../tips/TipList";
 
 export const AdminViews = () => {
@@ -21,6 +22,7 @@ export const AdminViews = () => {
       >
         <Route path="/viewchat" element={<ChatList />} />
         <Route path="/viewAllTips" element={<TipList />} />
+        <Route path="/createNewTip" element={<CreateTip />} />
       </Route>
     </Routes>
   );
