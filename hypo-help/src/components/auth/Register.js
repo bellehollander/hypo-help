@@ -24,6 +24,7 @@ export const Register = (props) => {
           localStorage.setItem(
             "hypo_user",
             JSON.stringify({
+              name: createdUser.name,
               id: createdUser.id,
               staff: createdUser.isStaff,
             })
@@ -62,11 +63,11 @@ export const Register = (props) => {
           Please Register for Hypo-Help
         </h1>
         <fieldset>
-          <label htmlFor="fullName"> Full Name </label>
+          <label htmlFor="name"> Full Name </label>
           <input
             onChange={updateCustomer}
             type="text"
-            id="fullName"
+            id="name"
             className="form-control"
             placeholder="Enter your name"
             required

@@ -2,6 +2,8 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import { ChatList } from "../Chat/ViewChat";
 import { CreateTip } from "../tips/CreateTip";
 import { TipList } from "../tips/TipList";
+import { UserHello } from "../auth/Userhello";
+import { CustomerList } from "../customers/CustomerList";
 
 export const AdminViews = () => {
   return (
@@ -23,6 +25,8 @@ export const AdminViews = () => {
         <Route path="/viewchat" element={<ChatList />} />
         <Route path="/viewAllTips" element={<TipList />} />
         <Route path="/createNewTip" element={<CreateTip />} />
+        <Route path="/customerList" element={<CustomerList />} />
+        <Route path="/" element={<UserHello />} />
       </Route>
     </Routes>
   );
