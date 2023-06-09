@@ -15,8 +15,12 @@ export const EmployeeNavBar = () => {
         <Link className="navbar__link" to="/viewAllTips">
           View All Tips
         </Link>
+      </li>{" "}
+      <li className="navbar__item active">
+        <Link className="navbar__link" to="/createNewTip">
+          Create a tip
+        </Link>
       </li>
-
       {localStorage.getItem("hypo_user") ? (
         <li className="navbar__item navbar__logout">
           <Link

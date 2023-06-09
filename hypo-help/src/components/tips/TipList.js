@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 import "./tips.css";
 // create our function taking in the prop of search terms
 export const TipList = ({ searchTerms }) => {
@@ -8,14 +9,20 @@ export const TipList = ({ searchTerms }) => {
   const [tips, updateTip] = useState([]);
   const [symptomTip, updateSymptomTip] = useState([]);
 
-  useEffect(() => {
-    //then we just need to fetch the tips with the expanded user
+  const hypoUser = localStorage.getItem("hypo_user");
+  const hypoUserObject = JSON.parse(hypoUser);
+
+  const tipList = () => {
     fetch(`http://localhost:8088/tips?_expand=user`)
       .then((response) => response.json())
       // then grab the tipData and update the tips with it
       .then((tipData) => {
         updateTip(tipData);
       });
+  };
+
+  useEffect(() => {
+    tipList();
   }, []);
 
   useEffect(() => {
@@ -27,6 +34,14 @@ export const TipList = ({ searchTerms }) => {
         updateSymptomTip(symptomTipData);
       });
   }, []);
+
+  const handleDeleteTip = (tipId) => {
+    fetch(`http://localhost:8088/tips/${tipId}`, {
+      method: "DELETE",
+    }).then(() => {
+      tipList();
+    });
+  };
 
   // then we need to map over the tips
   //set up a variable to store the correct symptomTip
@@ -65,6 +80,11 @@ export const TipList = ({ searchTerms }) => {
                 <div>Symptom: {symptomName}</div>
                 <div>{tip.description}</div>
                 <div>Admin: {tip?.user?.name}</div>
+                {hypoUserObject?.staff && (
+                  <button onClick={() => handleDeleteTip(tip.id)}>
+                    Delete
+                  </button>
+                )}
               </article>
             );
           }
