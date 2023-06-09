@@ -1,6 +1,8 @@
 import { Outlet, Route, Routes } from "react-router-dom";
 import { ChatForm } from "../Chat/ChatForm";
 import { ChatList } from "../Chat/ViewChat";
+import { SymptomContainer } from "../Symptom/SymptomContainer";
+import { TipList } from "../tips/TipList";
 
 export const CustomerViews = () => {
   return (
@@ -21,6 +23,8 @@ export const CustomerViews = () => {
       >
         <Route path="/viewchat" element={<ChatList />} />
         <Route path="chatform" element={<ChatForm />} />
+        <Route path="viewAllTips" element={<TipList />} />
+        <Route path="SearchTips" element={<SymptomContainer />} />
       </Route>
     </Routes>
   );
