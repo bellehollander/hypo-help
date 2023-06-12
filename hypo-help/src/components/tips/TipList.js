@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import "./tips.css";
 // create our function taking in the prop of search terms
@@ -68,20 +69,32 @@ export const TipList = ({ searchTerms }) => {
         ) {
           return (
             <article className="tip" key={tip.id}>
-              <div>Symptom: {symptomName}</div>
-              <div>{tip.description}</div>
-              <div>Admin: {tip?.user?.name}</div>
+              <div className="symptom">Symptom: {symptomName}</div>
+              <div className="description">{tip.description}</div>
+              <div className="admin">Admin: {tip?.user?.name}</div>
             </article>
           );
         } else {
           if (!searchTerms) {
+            const isCurrentUserTip = hypoUserObject?.id === tip.userId;
             return (
               <article className="tip" key={tip.id}>
-                <div>Symptom: {symptomName}</div>
-                <div>{tip.description}</div>
-                <div>Admin: {tip?.user?.name}</div>
+                {isCurrentUserTip && (
+                  <Link
+                    to={`/viewAllTip/${tip.id}/editTip`}
+                    className="edit-link"
+                  >
+                    Edit
+                  </Link>
+                )}
+                <div className="symptom">Symptom: {symptomName}</div>
+                <div className="description">{tip.description}</div>
+                <div className="admin">Admin: {tip?.user?.name}</div>
                 {hypoUserObject?.staff && (
-                  <button onClick={() => handleDeleteTip(tip.id)}>
+                  <button
+                    onClick={() => handleDeleteTip(tip.id)}
+                    className="delete-button"
+                  >
                     Delete
                   </button>
                 )}

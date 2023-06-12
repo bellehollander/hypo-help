@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import "./CreateTip.css";
 export const CreateTip = () => {
   const navigate = useNavigate();
   const hypoUser = localStorage.getItem("hypo_user");

@@ -1,10 +1,131 @@
-.chats {
+.chat-container {
   display: flex;
-  margin-bottom: 10px;
+  flex-direction: column;
+  gap: 16px;
 }
+
 .chat {
-  border: 2px solid lightblue;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  max-width: 80%;
+  padding: 12px;
+  border-radius: 16px;
+  background-color: #f2f2f2;
+}
+
+.chat .user {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.chat .symptom {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.chat .description {
+  font-size: 16px;
+}
+
+.chat .delete-button {
+  color: #dc3545;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #f8f9fa;
+}
+
+.chat {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat .user {
+  color: #007bff;
+}
+
+.chat .symptom {
+  color: #6c757d;
+}
+
+.chat .description {
+  color: #1e1e1e;
+}
+
+.chat .delete-button {
+  color: #dc3545;
+}
+
+/* ChatForm.css */
+
+.chat-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-form__title {
+  margin-bottom: 16px;
+  color: #1e1e1e;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1e1e1e;
+  font-weight: bold;
+}
+
+textarea {
+  height: 120px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  background-color: #ffffff;
+  resize: vertical;
+}
+
+select {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  background-color: #ffffff;
+}
+
+.btn-primary {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }

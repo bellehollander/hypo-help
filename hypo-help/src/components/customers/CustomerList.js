@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./Customers.css";
 
 export const CustomerList = () => {
   //set up state for the customers and updating them
@@ -39,12 +40,14 @@ export const CustomerList = () => {
       <h2>List of all current customers</h2>
 
       {customers.map((customer) => (
-        <section key={customer.id}>
-          <div> name: {customer.name}</div>
-          <div> email: {customer.email}</div>
-          <button onClick={() => handleDeleteButtonClick(customer.id)}>
-            {" "}
-            remove user{" "}
+        <section className="customer-profile" key={customer.id}>
+          <div className="name">Name: {customer.name}</div>
+          <div className="email">Email: {customer.email}</div>
+          <button
+            onClick={() => handleDeleteButtonClick(customer.id)}
+            className="delete-button"
+          >
+            Remove User
           </button>
         </section>
       ))}

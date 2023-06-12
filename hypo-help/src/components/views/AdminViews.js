@@ -4,6 +4,8 @@ import { CreateTip } from "../tips/CreateTip";
 import { TipList } from "../tips/TipList";
 import { UserHello } from "../auth/Userhello";
 import { CustomerList } from "../customers/CustomerList";
+import { TipEdit } from "../tips/TipEdit";
+import "./views.css";
 
 export const AdminViews = () => {
   return (
@@ -12,10 +14,12 @@ export const AdminViews = () => {
         path="/"
         element={
           <>
-            <h1>HYPO-HELP</h1>
-            <div>
-              Helping those with health anxiety, one less scary google search at
-              a time.
+            <div className="hypo-header">
+              <h1 className="hypo-title">HYPO-HELP</h1>
+              <div className="hypo-subtitle">
+                Helping those with health anxiety, one less scary google search
+                at a time.
+              </div>
             </div>
 
             <Outlet />
@@ -26,6 +30,7 @@ export const AdminViews = () => {
         <Route path="/viewAllTips" element={<TipList />} />
         <Route path="/createNewTip" element={<CreateTip />} />
         <Route path="/customerList" element={<CustomerList />} />
+        <Route path="/viewAllTip/:tipId/editTip" element={<TipEdit />} />
         <Route path="/" element={<UserHello />} />
       </Route>
     </Routes>

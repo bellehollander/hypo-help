@@ -1,0 +1,26 @@
+.symptom-search {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.symptom-search__input {
+  flex: 1;
+  padding: 6px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #1e1e1e;
+}
+
+.symptom-search__input::placeholder {
+  color: #888888;
+}
+
+.symptom-search__input:focus {
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}

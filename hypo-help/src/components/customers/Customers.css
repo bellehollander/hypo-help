@@ -1,0 +1,25 @@
+/* customerList.css */
+
+.customer-profile {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.customer-profile .name {
+  font-weight: bold;
+}
+
+.customer-profile .email {
+  margin-top: 8px;
+}
+
+.customer-profile .delete-button {
+  display: inline-block;
+  margin-top: 8px;
+  color: #dc3545;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

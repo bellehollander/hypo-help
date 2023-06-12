@@ -1,0 +1,16 @@
+.hypo-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.hypo-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.hypo-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-top: 10px;
+}

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import "./chat.css";
-import { ChatEdit } from "./ChatEdit";
 
 export const ChatList = () => {
   // set up inital state for the chat and the updateChat setter function
@@ -38,23 +37,25 @@ export const ChatList = () => {
   };
 
   return (
-    <>
+    <div className="chat-container">
       <h2>View the chat</h2>
       {chats.map((chat) => {
         return (
           <section className="chat" key={chat.id}>
-            <div> user: {chat?.user?.name}</div>
-            <div> symptom: {chat?.symptom?.name}</div>
-            <div>{chat.description}</div>
+            <div className="user">User: {chat?.user?.name}</div>
+            <div className="symptom">Symptom: {chat?.symptom?.name}</div>
+            <div className="description">{chat.description}</div>
             {hypoUserObject?.staff && (
-              <button onClick={() => handleDeleteChat(chat.id)}>Delete</button>
-            )}
-            {hypoUserObject?.staff === false && (
-              <button onClick={ChatEdit}>Edit Chat</button>
+              <button
+                onClick={() => handleDeleteChat(chat.id)}
+                className="delete-button"
+              >
+                Delete
+              </button>
             )}
           </section>
         );
       })}
-    </>
+    </div>
   );
 };
