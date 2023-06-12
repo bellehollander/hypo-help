@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import "./CreateTip.css";
 export const CreateTip = () => {
   const navigate = useNavigate();
   const hypoUser = localStorage.getItem("hypo_user");
@@ -50,7 +51,6 @@ export const CreateTip = () => {
       .then((response) => response.json())
       // then we capture that response
       .then((tipResponse) => {
-        debugger;
         // create a an object for a symptom tip to send to the API embeded in the fetch call
         // for the tipId we just need to capture that tipResponse.id as the id
         //set up the symptomTipToSendToTheApi

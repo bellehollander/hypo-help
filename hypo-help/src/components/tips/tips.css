@@ -1,9 +1,38 @@
+/* tips.css */
+
 .tip {
-  border: 2px solid lightblue;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-top: 5px;
-  padding-top: 5px;
+  border: 1px solid lightblue;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.tip .symptom {
+  font-weight: bold;
+}
+
+.tip .description {
+  margin-top: 8px;
+}
+
+.tip .admin {
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.tip .edit-link {
+  display: inline-block;
+  margin-top: 8px;
+  margin-right: 8px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.tip .delete-button {
+  display: inline-block;
+  margin-top: 8px;
+  color: #dc3545;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }

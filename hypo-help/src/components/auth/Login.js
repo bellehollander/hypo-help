@@ -18,6 +18,7 @@ export const Login = () => {
           localStorage.setItem(
             "hypo_user",
             JSON.stringify({
+              name: user.name,
               id: user.id,
               staff: user.isStaff,
             })
