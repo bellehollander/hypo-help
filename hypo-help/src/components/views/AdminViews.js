@@ -6,33 +6,37 @@ import { UserHello } from "../auth/Userhello";
 import { CustomerList } from "../customers/CustomerList";
 import { TipEdit } from "../tips/TipEdit";
 import "./views.css";
+import { EditEmail } from "../customers/EditEmail";
 
 export const AdminViews = () => {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <>
-            <div className="hypo-header">
-              <h1 className="hypo-title">HYPO-HELP</h1>
-              <div className="hypo-subtitle">
-                Helping those with health anxiety, one less scary google search
-                at a time.
-              </div>
-            </div>
+    <div className="app-container">
+      <div className="background-image"></div>
 
-            <Outlet />
-          </>
-        }
-      >
-        <Route path="/viewchat" element={<ChatList />} />
-        <Route path="/viewAllTips" element={<TipList />} />
-        <Route path="/createNewTip" element={<CreateTip />} />
-        <Route path="/customerList" element={<CustomerList />} />
-        <Route path="/viewAllTip/:tipId/editTip" element={<TipEdit />} />
-        <Route path="/" element={<UserHello />} />
-      </Route>
-    </Routes>
+      <div className="content-container">
+        <div className="hypo-header">
+          <h1 className="hypo-title">HYPO-HELP</h1>
+          <div className="hypo-subtitle">
+            Helping those with health anxiety, one less scary google search at a
+            time.
+          </div>
+        </div>
+
+        <Routes>
+          <Route path="/viewchat" element={<ChatList />} />
+          <Route path="/viewAllTips" element={<TipList />} />
+          <Route path="/createNewTip" element={<CreateTip />} />
+          <Route path="/customerList" element={<CustomerList />} />
+          <Route path="/viewAllTip/editTip/:customerId" element={<TipEdit />} />
+          <Route
+            path="customers/editEmail/:customerId"
+            element={<EditEmail />}
+          />
+          <Route path="/" element={<UserHello />} />
+        </Routes>
+
+        <Outlet />
+      </div>
+    </div>
   );
 };

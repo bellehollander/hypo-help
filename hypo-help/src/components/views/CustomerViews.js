@@ -8,29 +8,28 @@ import "./views.css";
 
 export const CustomerViews = () => {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <>
-            <div className="hypo-header">
-              <h1 className="hypo-title">HYPO-HELP</h1>
-              <div className="hypo-subtitle">
-                Helping those with health anxiety, one less scary google search
-                at a time.
-              </div>
-            </div>
+    <div className="app-container">
+      <div className="background-image"></div>
 
-            <Outlet />
-          </>
-        }
-      >
-        <Route path="/viewchat" element={<ChatList />} />
-        <Route path="chatform" element={<ChatForm />} />
-        <Route path="viewAllTips" element={<TipList />} />
-        <Route path="SearchTips" element={<SymptomContainer />} />
-        <Route path="/" element={<UserHello />} />
-      </Route>
-    </Routes>
+      <div className="content-container">
+        <div className="hypo-header">
+          <h1 className="hypo-title">HYPO-HELP</h1>
+          <div className="hypo-subtitle">
+            Helping those with health anxiety, one less scary google search at a
+            time.
+          </div>
+        </div>
+
+        <Routes>
+          <Route path="/viewchat" element={<ChatList />} />
+          <Route path="/chatform" element={<ChatForm />} />
+          <Route path="/viewAllTips" element={<TipList />} />
+          <Route path="/SearchTips" element={<SymptomContainer />} />
+          <Route path="/" element={<UserHello />} />
+        </Routes>
+
+        <Outlet />
+      </div>
+    </div>
   );
 };
