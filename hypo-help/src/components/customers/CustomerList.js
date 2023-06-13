@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import "./Customers.css";
 
 export const CustomerList = () => {
@@ -41,8 +42,12 @@ export const CustomerList = () => {
 
       {customers.map((customer) => (
         <section className="customer-profile" key={customer.id}>
-          <div className="name">Name: {customer.name}</div>
+          <Link className="name" to={`/customers/editEmail/${customer.id}`}>
+            Name: {customer.name}
+          </Link>
+
           <div className="email">Email: {customer.email}</div>
+
           <button
             onClick={() => handleDeleteButtonClick(customer.id)}
             className="delete-button"
