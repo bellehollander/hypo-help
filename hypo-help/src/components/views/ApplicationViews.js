@@ -1,4 +1,4 @@
-import { AdminViews } from "./AdminViews";
+/*import { AdminViews } from "./AdminViews";
 import { CustomerViews } from "./CustomerViews";
 
 export const ApplicationViews = () => {
@@ -9,4 +9,4 @@ export const ApplicationViews = () => {
   } else {
     return <CustomerViews />;
   }
-};
+}; */

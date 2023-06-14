@@ -55,7 +55,7 @@ export const TipList = ({ searchTerms }) => {
 
   return (
     <>
-      <section>hypo-help tips</section>
+      <h2 className="tip-header">hypo-help tips</h2>
       {tips.map((tip) => {
         const matchingSymptomTip = symptomTip.find(
           (symptom) => symptom.tipId === tip.id
@@ -90,7 +90,7 @@ export const TipList = ({ searchTerms }) => {
                 <div className="symptom">Symptom: {symptomName}</div>
                 <div className="description">{tip.description}</div>
                 <div className="admin">Admin: {tip?.user?.name}</div>
-                {hypoUserObject?.staff && (
+                {hypoUserObject?.staff && isCurrentUserTip && (
                   <button
                     onClick={() => handleDeleteTip(tip.id)}
                     className="delete-button"

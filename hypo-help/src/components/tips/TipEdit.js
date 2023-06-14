@@ -83,7 +83,9 @@ export const TipEdit = () => {
       <h2 className="TipForm__title">Tip</h2>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="description">Description:</label>
+          <label htmlFor="description" className="edit-description">
+            Description:
+          </label>
           <textarea
             required
             autoFocus
@@ -110,7 +112,9 @@ export const TipEdit = () => {
       </fieldset>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="description">Symptom</label>
+          <label htmlFor="description" className="edit-Symptom">
+            Symptom
+          </label>
           <select
             required
             autoFocus

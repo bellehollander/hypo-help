@@ -50,7 +50,9 @@ export const Login = () => {
             />
           </fieldset>
           <fieldset>
-            <button type="submit">Sign in</button>
+            <button type="submit" className="sign-in">
+              Sign in
+            </button>
           </fieldset>
         </form>
       </section>

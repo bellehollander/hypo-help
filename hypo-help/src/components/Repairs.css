@@ -1,5 +1,8 @@
 /* Import the google web fonts you want to use */
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 
 /*Typography
 --------------------------------------------------------------*/
@@ -7,20 +10,26 @@ body,
 button,
 input,
 select,
-textarea {
+textarea,
+div {
   color: #404040;
-  font-family: "Comfortaa", Arial, sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 14px;
   line-height: 1.5;
 }
 
 body {
-    padding: 0 3rem;
+  padding: 0 3rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Patua One", serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   letter-spacing: 2px;
+  font-family: "Bungee Shade", cursive;
 }
 
 p {
@@ -30,4 +39,3 @@ p {
 .title--main {
   margin-block-end: 0;
 }
-

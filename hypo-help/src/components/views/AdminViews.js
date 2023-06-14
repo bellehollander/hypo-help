@@ -8,7 +8,7 @@ import { TipEdit } from "../tips/TipEdit";
 import "./views.css";
 import { EditEmail } from "../customers/EditEmail";
 
-export const AdminViews = () => {
+export const AdminViews = ({}) => {
   return (
     <div className="app-container">
       <div className="background-image"></div>
@@ -27,12 +27,12 @@ export const AdminViews = () => {
           <Route path="/viewAllTips" element={<TipList />} />
           <Route path="/createNewTip" element={<CreateTip />} />
           <Route path="/customerList" element={<CustomerList />} />
-          <Route path="/viewAllTip/editTip/:customerId" element={<TipEdit />} />
+          <Route path="/viewAllTip/:tipId/editTip" element={<TipEdit />} />
           <Route
             path="customers/editEmail/:customerId"
             element={<EditEmail />}
           />
-          <Route path="/" element={<UserHello />} />
+          <Route path="/" className="user-hello" element={<UserHello />} />
         </Routes>
 
         <Outlet />

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./NavBar.css";
 
-export const EmployeeNavBar = () => {
+export const EmployeeNavBar = ({ isDarkMode, toggleDarkMode }) => {
   const navigate = useNavigate();
 
   return (
@@ -42,6 +42,11 @@ export const EmployeeNavBar = () => {
       ) : (
         ""
       )}
+      <li className="navbar__item navbar__dark-mode-toggle">
+        <div className="dark-mode-toggle">
+          <button onClick={toggleDarkMode}>{isDarkMode ? "💡" : "💡"}</button>
+        </div>
+      </li>
     </ul>
   );
 };
