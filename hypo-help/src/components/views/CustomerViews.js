@@ -1,7 +1,9 @@
 import { Outlet, Route, Routes } from "react-router-dom";
 import { UserHello } from "../auth/Userhello";
+import { ChatEdit } from "../Chat/ChatEdit";
 import { ChatForm } from "../Chat/ChatForm";
 import { ChatList } from "../Chat/ViewChat";
+import { ListOfDoctors } from "../doctors/DoctorInYourArea";
 import { SymptomContainer } from "../Symptom/SymptomContainer";
 import { TipList } from "../tips/TipList";
 import "./views.css";
@@ -26,6 +28,8 @@ export const CustomerViews = () => {
           <Route path="/viewAllTips" element={<TipList />} />
           <Route path="/SearchTips" element={<SymptomContainer />} />
           <Route path="/" element={<UserHello />} />
+          <Route path="/chat/edit/:chatId" element={<ChatEdit />} />
+          <Route path="/doctorList" element={<ListOfDoctors />} />
         </Routes>
 
         <Outlet />

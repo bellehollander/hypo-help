@@ -80,7 +80,9 @@ export const CreateTip = () => {
       <h2 className="ProductForm__title">New Tip</h2>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="description">Description:</label>
+          <label htmlFor="description" className="description-select">
+            Description:
+          </label>
           <input
             required
             autoFocus
@@ -102,7 +104,10 @@ export const CreateTip = () => {
       </fieldset>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="type"> Symptoms: </label>
+          <label htmlFor="type" className="symptom-select">
+            {" "}
+            Symptoms:{" "}
+          </label>
           <select
             required
             className="form-control"

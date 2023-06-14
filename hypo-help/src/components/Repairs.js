@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+/*import { Route, Routes } from "react-router-dom"
 import { Authorized } from "./views/Authorized"
 import { ApplicationViews } from "./views/ApplicationViews"
 import { NavBar } from "./nav/NavBar"
@@ -22,5 +22,32 @@ export const Repairs = () => {
 
 		} />
 	</Routes>
-}
+} */
+import { Route, Routes } from "react-router-dom";
+import { Authorized } from "./views/Authorized";
+import { ApplicationViews } from "./views/ApplicationViews";
+import { NavBar } from "./nav/NavBar";
+import { Login } from "./auth/Login";
+import { Register } from "./auth/Register";
+import "./Repairs.css";
+import { AppContainer } from "./views/AppContainer";
 
+export const Repairs = () => {
+  return (
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+
+      <Route
+        path="*"
+        element={
+          <Authorized>
+            <>
+              <AppContainer />
+            </>
+          </Authorized>
+        }
+      />
+    </Routes>
+  );
+};

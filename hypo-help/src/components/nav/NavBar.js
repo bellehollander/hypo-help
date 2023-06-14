@@ -1,5 +1,6 @@
-import { CustomerNavBar } from "./CustomerNav";
+/*import { CustomerNavBar } from "./CustomerNav";
 import { EmployeeNavBar } from "./EmployeeNav";
+
 import "./NavBar.css";
 
 export const NavBar = () => {
@@ -10,4 +11,4 @@ export const NavBar = () => {
   } else {
     return <CustomerNavBar />;
   }
-};
+};*/

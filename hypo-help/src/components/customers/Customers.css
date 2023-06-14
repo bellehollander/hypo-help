@@ -1,18 +1,46 @@
-/* customerList.css */
-
 .customer-profile {
   border: 1px solid #ccc;
-  border-radius: 8px;
+
   padding: 16px;
   margin-bottom: 16px;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+.customer-profile:hover {
+  background-color: #f4eeff;
+}
+
+.dark-mode .customer-profile {
+  border: 1px solid black;
+
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: black;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .customer-profile:hover {
+  background-color: #333333;
 }
 
 .customer-profile .name {
   font-weight: bold;
+  color: black;
+}
+
+.dark-mode .customer-profile .name {
+  font-weight: bold;
+  color: white;
 }
 
 .customer-profile .email {
   margin-top: 8px;
+}
+
+.dark-mode .customer-profile .email {
+  margin-top: 8px;
+  color: white;
 }
 
 .customer-profile .delete-button {
@@ -22,4 +50,12 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.customer-title {
+  color: black;
+}
+
+.dark-mode .customer-title {
+  color: white;
 }

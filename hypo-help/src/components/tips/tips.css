@@ -1,38 +1,85 @@
 /* tips.css */
 
 .tip {
-  border: 1px solid lightblue;
+  border: 1px solid white;
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
+  background-color: white;
+}
+.dark-mode .tip {
+  border: 4px solid white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: black;
+}
+.tip:hover {
+  background-color: #f4eeff;
+}
+.dark-mode .tip:hover {
+  background-color: #333333;
 }
 
 .tip .symptom {
   font-weight: bold;
 }
+.dark-mode .tip .symptom {
+  font-weight: bold;
+  color: white;
+}
 
 .tip .description {
   margin-top: 8px;
+}
+.dark-mode .tip .description {
+  margin-top: 8px;
+  color: white;
 }
 
 .tip .admin {
   margin-top: 8px;
   font-style: italic;
 }
+.dark-mode .tip .admin {
+  margin-top: 8px;
+  font-style: italic;
+  color: white;
+}
 
 .tip .edit-link {
   display: inline-block;
   margin-top: 8px;
   margin-right: 8px;
-  color: purple;
-  text-decoration: none;
+  color: black;
+  text-decoration: overline;
+}
+.dark-mode .tip .edit-link {
+  display: inline-block;
+  margin-top: 8px;
+  margin-right: 8px;
+  color: white;
+  text-decoration: overline;
 }
 
 .tip .delete-button {
   display: inline-block;
   margin-top: 8px;
-  color: #dc3545;
+  color: red;
   border: none;
   background-color: transparent;
   cursor: pointer;
+  text-decoration: overline;
+}
+.tip-header {
+  color: black;
+}
+.dark-mode .tip-header {
+  color: white;
+}
+.edit-description {
+  color: black;
+}
+.dark-mode .edit-description {
+  color: white;
 }

@@ -52,7 +52,9 @@ export const ChatForm = () => {
       <h2 className="chat-form__title">Let's Talk About It</h2>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="description">Tell us how you're feeling:</label>
+          <label htmlFor="description" className="how-your-feeling">
+            Tell us how you're feeling:
+          </label>
           <textarea
             required
             autoFocus
@@ -69,7 +71,7 @@ export const ChatForm = () => {
       </fieldset>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="symptom">
+          <label htmlFor="symptom" className="symptom-select">
             Select the symptom you're experiencing:
           </label>
           <select

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./NavBar.css";
 
-export const CustomerNavBar = () => {
+export const CustomerNavBar = ({ isDarkMode, toggleDarkMode }) => {
   const navigate = useNavigate();
 
   return (
@@ -26,6 +26,11 @@ export const CustomerNavBar = () => {
           Search Symptoms
         </Link>
       </li>
+      <li className="navbar__item active">
+        <Link className="navbar__link" to="/doctorList">
+          find a healthcare provider
+        </Link>
+      </li>
       {localStorage.getItem("hypo_user") ? (
         <li className="navbar__item navbar__logout">
           <Link
@@ -42,6 +47,9 @@ export const CustomerNavBar = () => {
       ) : (
         ""
       )}
+      <div className="dark-mode-toggle">
+        <button onClick={toggleDarkMode}>{isDarkMode ? "💡" : "💡"}</button>
+      </div>
     </ul>
   );
 };
