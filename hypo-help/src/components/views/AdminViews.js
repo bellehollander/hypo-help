@@ -7,8 +7,11 @@ import { CustomerList } from "../customers/CustomerList";
 import { TipEdit } from "../tips/TipEdit";
 import "./views.css";
 import { EditEmail } from "../customers/EditEmail";
+import logo from "./hypoLogo2.png";
+import darkLogo from "./hypoLogoDark.png";
 
-export const AdminViews = ({}) => {
+export const AdminViews = ({ isDarkMode }) => {
+  const logoSource = isDarkMode ? darkLogo : logo;
   return (
     <div className="app-container">
       <div className="background-image"></div>
@@ -16,6 +19,9 @@ export const AdminViews = ({}) => {
       <div className="content-container">
         <div className="hypo-header">
           <h1 className="hypo-title">HYPO-HELP</h1>
+          <div className="hypo-image">
+            <img src={logoSource} alt="cloud-logo"></img>
+          </div>
           <div className="hypo-subtitle">
             Helping those with health anxiety, one less scary google search at a
             time.

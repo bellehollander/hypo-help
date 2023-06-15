@@ -59,3 +59,25 @@
 .dark-mode .customer-title {
   color: white;
 }
+.dark-mode .name-edit {
+  color: white;
+}
+.dark-mode .email-edit {
+  color: white;
+}
+.form-group-customerEdit {
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #f4eeff;
+}
+
+.dark-mode .form-group-customerEdit {
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: black;
+}
+.dark-mode .customer-edit-form__title {
+  color: white;
+}

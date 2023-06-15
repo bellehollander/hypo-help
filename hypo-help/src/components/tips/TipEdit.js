@@ -82,7 +82,7 @@ export const TipEdit = () => {
     <form className="TipForm">
       <h2 className="TipForm__title">Tip</h2>
       <fieldset>
-        <div className="form-group">
+        <div className="form-group TipForm__container">
           <label htmlFor="description" className="edit-description">
             Description:
           </label>
@@ -111,9 +111,9 @@ export const TipEdit = () => {
         </div>
       </fieldset>
       <fieldset>
-        <div className="form-group">
+        <div className="form-group TipForm__container">
           <label htmlFor="description" className="edit-Symptom">
-            Symptom
+            Symptom:
           </label>
           <select
             required
