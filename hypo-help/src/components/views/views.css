@@ -84,6 +84,22 @@ https://img.freepik.com/premium-photo/different-wild-flowers-paper-background_17
   font-size: 60px;
   font-weight: bold;
   margin-bottom: 8px;
+  margin-right: 10px;
+}
+
+.hypo-image {
+  display: flex;
+  align-items: center;
+  margin-top: -90px;
+  margin-left: 585px;
+}
+
+.hypo-image img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; /* Make the image circular */
+  margin-left: 10px; /* Add margin to create space between the image and the subtitle */
+  border: 3px solid white;
 }
 
 .hypo-subtitle {

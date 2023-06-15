@@ -83,3 +83,33 @@
 .dark-mode .edit-description {
   color: white;
 }
+.TipForm__title {
+  color: black;
+}
+.dark-mode .TipForm__title {
+  color: white;
+}
+.TipForm__container {
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #f4eeff;
+}
+
+.dark-mode .TipForm__container {
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: black;
+}
+
+.TipForm__container:hover {
+  background-color: #f4eeff;
+}
+
+.dark-mode .TipForm__container:hover {
+  background-color: #333333;
+}
+.dark-mode .edit-Symptom {
+  color: white;
+}
