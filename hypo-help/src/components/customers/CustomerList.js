@@ -38,7 +38,7 @@ export const CustomerList = () => {
 
   return (
     <>
-      <h2 className="customer-title">List of all current customers</h2>
+      <h2 className="customer-title">List of all current users</h2>
 
       {customers.map((customer) => (
         <section className="customer-profile" key={customer.id}>

@@ -9,6 +9,7 @@ import { TipList } from "../tips/TipList";
 import "./views.css";
 import logo from "./hypoLogo2.png";
 import darkLogo from "./hypoLogoDark.png";
+import { FavoritedTips } from "../tips/FavoriteTips";
 
 export const CustomerViews = ({ isDarkMode }) => {
   const logoSource = isDarkMode ? darkLogo : logo;
@@ -36,6 +37,7 @@ export const CustomerViews = ({ isDarkMode }) => {
           <Route path="/" element={<UserHello />} />
           <Route path="/chat/edit/:chatId" element={<ChatEdit />} />
           <Route path="/doctorList" element={<ListOfDoctors />} />
+          <Route path="/favoriteList" element={<FavoritedTips />} />
         </Routes>
 
         <Outlet />

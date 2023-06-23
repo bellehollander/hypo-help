@@ -19,11 +19,14 @@
 .dark-mode .chat:hover {
   background-color: #333333;
 }
+
 .edit-link {
+  /* Add margin to move the link down */
   color: black;
   text-decoration: overline;
 }
 .dark-mode .edit-link {
+  /* Add margin to move the link down */
   color: white;
   text-decoration: overline;
 }
@@ -177,10 +180,6 @@ select {
   cursor: pointer;
 }
 
-.btn-primary:hover {
-  background-color: lavender;
-}
-
 .btn-primary:focus {
   outline: none;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
@@ -190,4 +189,167 @@ select {
 }
 .dark-mode .how-your-feeling {
   color: white;
+}
+.reply-section {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.reply-section .reply-input {
+  flex: 1;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  background-color: #ffffff;
+  margin-right: 8px;
+}
+
+.reply-section .submit-button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: black;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font-size: 12px;
+  width: 60px;
+  height: 24px;
+}
+
+.comment {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.dark-mode .comment {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: black;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.comment:hover .delete-comment-button {
+  background-color: transparent;
+}
+
+.comment-user {
+  font-weight: bold;
+}
+
+.comment-text {
+  margin-left: 8px;
+}
+
+.delete-comment-button {
+  margin-left: 14px;
+  padding: 4px;
+  color: red;
+  cursor: pointer;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+}
+.dark-mode .delete-comment-button {
+  margin-left: 14px;
+  padding: 4px;
+  color: red;
+  cursor: pointer;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: black;
+}
+
+.delete-comment-button:hover {
+  background-color: transparent;
+}
+.dark-mode .delete-comment-button:hover {
+  background-color: transparent;
+}
+
+.reply-section .submit-button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: black;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font-size: 12px;
+  width: 60px;
+  height: 24px;
+}
+
+.reply-section .submit-button:hover {
+  background-color: #333333;
+}
+.dark-mode .reply-section .submit-button:hover {
+  background-color: none;
+}
+
+.reply-section .reply-input {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  background-color: #ffffff;
+  width: 200px;
+}
+
+.reply-section .reply-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+.comment .comment-user {
+  font-weight: bold;
+  color: black;
+}
+
+.comment-text {
+  margin-left: 8px;
+  color: #1e1e1e;
+}
+.dark-mode .comment-text {
+  margin-left: 8px;
+  color: white;
+}
+
+.dark-mode .comment .comment-user {
+  font-weight: bold;
+  color: white;
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #8e8e8e;
+}
+
+.like-button.liked {
+  color: #ff4d4d;
+}
+
+.heart-icon {
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+.like-count {
+  font-size: 14px;
+  margin-left: 4px;
 }

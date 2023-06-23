@@ -1,4 +1,4 @@
-.navbar {
+/*.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,3 +41,4 @@
 .navbar__logout {
   margin-right: 10px;
 }
+*/
