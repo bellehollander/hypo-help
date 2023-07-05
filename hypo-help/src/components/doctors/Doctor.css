@@ -6,7 +6,7 @@
   margin-bottom: 20px;
   border-radius: 20px;
   padding: 10px;
-  background-color: white;
+  background-color: #eef2f9;
 }
 .dark-mode .doctor-card {
   margin-bottom: 20px;
@@ -47,12 +47,12 @@ h4 {
   color: white;
 }
 .search-btn {
-  background-color: #f4eeff;
-  color: black;
-}
-.dark-mode .search-btn {
   background-color: black;
   color: white;
+}
+.dark-mode .search-btn {
+  background-color: white;
+  color: black;
 }
 .dark-mode .doctor-header {
   color: white;
@@ -74,7 +74,7 @@ h4 {
 }
 
 .search-area {
-  background-color: white; /* white border in light mode */
+  background-color: #eef2f9; /* white border in light mode */
   border-radius: 20px;
   padding: 10px;
   margin-bottom: 20px;
@@ -87,4 +87,12 @@ h4 {
   padding: 0;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.search-btn {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 30px;
 }

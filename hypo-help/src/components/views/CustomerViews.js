@@ -5,13 +5,21 @@ import { ChatForm } from "../Chat/ChatForm";
 import { ChatList } from "../Chat/ViewChat";
 import { ListOfDoctors } from "../doctors/DoctorInYourArea";
 import { SymptomContainer } from "../Symptom/SymptomContainer";
-import { TipList } from "../tips/TipList";
+
 import "./views.css";
 import logo from "./hypoLogo2.png";
 import darkLogo from "./hypoLogoDark.png";
 import { FavoritedTips } from "../tips/FavoriteTips";
+import { PrivateMessagePage } from "../Chat/PrivateMessage";
+import { Inbox } from "../Chat/Inbox";
 
-export const CustomerViews = ({ isDarkMode }) => {
+export const CustomerViews = ({
+  isDarkMode,
+  messageCountSet,
+  blockUser,
+  blockedUsers,
+  unblockUser,
+}) => {
   const logoSource = isDarkMode ? darkLogo : logo;
   return (
     <div className="app-container">
@@ -32,12 +40,26 @@ export const CustomerViews = ({ isDarkMode }) => {
         <Routes>
           <Route path="/viewchat" element={<ChatList />} />
           <Route path="/chatform" element={<ChatForm />} />
-          <Route path="/viewAllTips" element={<TipList />} />
-          <Route path="/SearchTips" element={<SymptomContainer />} />
+          <Route path="/viewAllTips" element={<SymptomContainer />} />
           <Route path="/" element={<UserHello />} />
           <Route path="/chat/edit/:chatId" element={<ChatEdit />} />
+          <Route
+            path="/private-message/:userId"
+            element={<PrivateMessagePage blockedUsers={blockedUsers} />}
+          />
           <Route path="/doctorList" element={<ListOfDoctors />} />
           <Route path="/favoriteList" element={<FavoritedTips />} />
+          <Route
+            path="/inbox"
+            element={
+              <Inbox
+                blockedUsers={blockedUsers}
+                blockUser={blockUser}
+                unblockUser={unblockUser}
+                messageCountSet={messageCountSet}
+              />
+            }
+          />
         </Routes>
 
         <Outlet />

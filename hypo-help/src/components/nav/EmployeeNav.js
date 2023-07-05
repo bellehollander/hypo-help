@@ -1,11 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
-import "./NavBar.css";
 
 export const EmployeeNavBar = ({ isDarkMode, toggleDarkMode }) => {
   const navigate = useNavigate();
 
   return (
-    <div lassName="navbar__links">
+    <div className="navbar__links">
       <ul className="navbar">
         <li className="navbar__item active">
           <Link className="navbar__link" to="/">

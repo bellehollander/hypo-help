@@ -80,7 +80,7 @@ export const TipEdit = () => {
 
   return (
     <form className="TipForm">
-      <h2 className="TipForm__title">Tip</h2>
+      <h2 className="TipForm__title">Edit your tip</h2>
       <fieldset>
         <div className="form-group TipForm__container">
           <label htmlFor="description" className="edit-description">

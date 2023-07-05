@@ -37,10 +37,10 @@ export const EditEmail = () => {
 
   return (
     <form className="customer-edit-form">
-      <h2 className="customer-edit-form__title">Edit Customer</h2>
+      <h2 className="customer-edit-form__title">Edit User Information</h2>
       <fieldset className="customer-edit-form__fieldset">
         <div className="form-group-customerEdit">
-          <label htmlFor="name" className="name-edit">
+          <label htmlFor="name" className="name">
             Name
           </label>
           <textarea
@@ -59,7 +59,7 @@ export const EditEmail = () => {
       </fieldset>
       <fieldset className="customer-edit-form__fieldset">
         <div className="form-group-customerEdit">
-          <label htmlFor="email" className="email-edit">
+          <label htmlFor="email" className="edit">
             Email
           </label>
           <textarea

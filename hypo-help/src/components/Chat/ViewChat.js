@@ -59,8 +59,6 @@ export const ChatList = () => {
     fetchLikes();
   }, []);
 
-  // ...
-
   const handleDeleteChat = (chatId) => {
     // Fetch the chat data
     fetch(`http://localhost:8088/CustomerForms/${chatId}`, {
@@ -81,8 +79,23 @@ export const ChatList = () => {
           });
       })
       .then(() => {
+        // Fetch the likes for the chat
+        fetch(`http://localhost:8088/chatLikes?chatId=${chatId}`)
+          .then((response) => response.json())
+          .then((likes) => {
+            // Delete each like
+            const deletePromises = likes.map((like) =>
+              fetch(`http://localhost:8088/chatLikes/${like.id}`, {
+                method: "DELETE",
+              })
+            );
+            return Promise.all(deletePromises);
+          });
+      })
+      .then(() => {
         getCustomerForms();
         fetchComments();
+        fetchLikes();
       });
   };
 
@@ -181,7 +194,6 @@ export const ChatList = () => {
             <div className="user">User: {chat?.user?.name}</div>
             <div className="symptom">Symptom: {chat?.symptom?.name}</div>
             <div className="description">{chat.description}</div>
-
             <div className="like-section">
               <button
                 onClick={() =>
@@ -197,14 +209,20 @@ export const ChatList = () => {
                 <span className="like-count">{likeCount}</span>
               </button>
             </div>
-
             {chatComments.map((comment) => (
               <div key={comment.id} className="comment">
                 <span className="comment-user">
-                  {comment?.user?.name} replied:
+                  {comment.userId === hypoUserObject.id
+                    ? "You"
+                    : comment.user.isStaff
+                    ? "Admin"
+                    : comment.user.name}{" "}
+                  replied:
                 </span>
                 <span className="comment-text">{comment.replyText}</span>
-                {comment.userId === hypoUserObject.id && (
+                {(comment.userId === hypoUserObject.id ||
+                  hypoUserObject.staff ||
+                  (hypoUserObject.staff && comment.user.staff)) && (
                   <button
                     onClick={() => handleDeleteComment(comment.id)}
                     className="delete-comment-button"
@@ -215,7 +233,7 @@ export const ChatList = () => {
               </div>
             ))}
 
-            {isStaff && (
+            {
               <>
                 <div className="reply-section">
                   <input
@@ -229,29 +247,35 @@ export const ChatList = () => {
                     onClick={() => handleReplySubmit(chat.id)}
                     className="submit-button"
                   >
-                    Submit
+                    Send
                   </button>
                 </div>
-                <button
-                  onClick={() => handleDeleteChat(chat.id)}
-                  className="delete-button"
-                >
-                  Delete Chat
-                </button>
+                {isStaff && (
+                  <button
+                    onClick={() => handleDeleteChat(chat.id)}
+                    className="delete-button"
+                  >
+                    Delete Chat
+                  </button>
+                )}
               </>
+            }
+            {!isCurrentUser && !isStaff && !chat.user.staff && (
+              <Link
+                to={`/private-message/${chat?.user?.id}`}
+                className="private-message-link"
+              >
+                Private Message
+              </Link>
             )}
+
             {isCurrentUser && !isStaff && (
-              <>
-                <Link to={`/chat/edit/${chat.id}`} className="edit-link">
-                  Edit
-                </Link>
-                <button
-                  onClick={() => handleDeleteChat(chat.id)}
-                  className="delete-button"
-                >
-                  Delete
-                </button>
-              </>
+              <button
+                onClick={() => handleDeleteChat(chat.id)}
+                className="delete-button"
+              >
+                Delete Chat
+              </button>
             )}
           </section>
         );

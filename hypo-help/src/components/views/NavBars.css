@@ -100,3 +100,25 @@
 .dark-mode .user-hello {
   color: white;
 }
+.fa-comment {
+  position: relative;
+  font-size: 22px; /* Adjust the font size as needed */
+}
+
+.fa-comment.has-messages {
+  color: red; /* Set the color of the icon to red */
+}
+
+.fa-layers-text {
+  /* Set the background color of the number */
+
+  color: red; /* Set the text color of the number */
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 3px;
+  font-family: sans-serif;
+
+  /* Adjust the padding as needed */
+
+  padding-right: 3px;
+}
