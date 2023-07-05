@@ -11,19 +11,27 @@
   max-width: 80%;
   padding: 12px;
   border-radius: 16px;
-  background-color: #f2f2f2;
+  background-color: #eef2f9;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 .chat:hover {
-  background-color: #f4eeff;
+  transform: translateY(-4px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .dark-mode .chat:hover {
-  background-color: #333333;
+  transform: translateY(-4px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .edit-link {
+  /* Add margin to move the link down */
   color: black;
   text-decoration: overline;
 }
 .dark-mode .edit-link {
+  /* Add margin to move the link down */
   color: white;
   text-decoration: overline;
 }
@@ -58,7 +66,7 @@
 }*/
 
 .chat {
-  background-color: #ffffff;
+  background-color: #eef2f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .dark-mode .chat {
@@ -177,10 +185,6 @@ select {
   cursor: pointer;
 }
 
-.btn-primary:hover {
-  background-color: lavender;
-}
-
 .btn-primary:focus {
   outline: none;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
@@ -189,5 +193,318 @@ select {
   color: black;
 }
 .dark-mode .how-your-feeling {
+  color: white;
+}
+.reply-section {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.reply-section .reply-input {
+  flex: 1;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  background-color: #ffffff;
+  margin-right: 8px;
+}
+
+.reply-section .submit-button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: black;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font-size: 12px;
+  width: 60px;
+  height: 24px;
+}
+
+.comment {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.dark-mode .comment {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: black;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.comment:hover .delete-comment-button {
+  background-color: transparent;
+}
+
+.comment-user {
+  font-weight: bold;
+}
+
+.comment-text {
+  margin-left: 8px;
+}
+
+.delete-comment-button {
+  margin-left: 14px;
+  padding: 4px;
+  color: red;
+  cursor: pointer;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+}
+.dark-mode .delete-comment-button {
+  margin-left: 14px;
+  padding: 4px;
+  color: red;
+  cursor: pointer;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: black;
+}
+
+.delete-comment-button:hover {
+  background-color: transparent;
+}
+.dark-mode .delete-comment-button:hover {
+  background-color: transparent;
+}
+
+.reply-section .submit-button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: black;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font-size: 12px;
+  width: 60px;
+  height: 24px;
+}
+
+.reply-section .submit-button:hover {
+  background-color: #333333;
+}
+.dark-mode .reply-section .submit-button:hover {
+  background-color: none;
+}
+
+.reply-section .reply-input {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  background-color: #ffffff;
+  width: 200px;
+}
+
+.reply-section .reply-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+.comment .comment-user {
+  font-weight: bold;
+  color: black;
+}
+
+.comment-text {
+  margin-left: 8px;
+  color: #1e1e1e;
+}
+.dark-mode .comment-text {
+  margin-left: 8px;
+  color: white;
+}
+
+.dark-mode .comment .comment-user {
+  font-weight: bold;
+  color: white;
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: black;
+}
+.dark-mode .like-button {
+  color: white;
+  background: none;
+}
+
+.like-button.liked {
+  color: #ff4d4d;
+  background: none;
+}
+
+.heart-icon {
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+.like-count {
+  font-size: 14px;
+  margin-left: 4px;
+}
+.inbox-container {
+  max-width: 600px;
+  padding: 20px;
+  background-color: #eef2f9;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+}
+.dark-mode .inbox-container {
+  background-color: black;
+  color: white;
+}
+
+.inbox-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-type-header {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.message {
+  padding: 10px;
+
+  border-radius: 5px;
+
+  margin-bottom: 20px;
+}
+.dark-mode .message {
+  color: white;
+}
+
+.message-sender {
+  font-weight: bold;
+  font-size: 16px;
+  font-style: italic;
+}
+.dark-mode .message-sender {
+  color: white;
+}
+
+.message-content {
+  margin-top: 5px;
+  font-size: 14px;
+}
+.dark-mode .message-content {
+  color: white;
+}
+.dark-mode .message-time {
+  color: white;
+}
+
+.reply-button {
+  padding: 5px 10px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.dark-mode .reply-button {
+  background-color: white;
+  color: black;
+}
+.dark-mode .reply-button:hover {
+  background-color: white;
+}
+
+.reply-button:hover {
+  background-color: #333333;
+}
+/* chat.css */
+
+.compose-message-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #eef2f9;
+  border-radius: 8px;
+}
+.dark-mode .compose-message-container {
+  background-color: black;
+  color: white;
+}
+
+.compose-message-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.compose-message-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.compose-message-textarea {
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+
+  border-radius: 4px;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.compose-message-button {
+  padding: 8px 16px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.dark-mode .compose-message-button {
+  background-color: white;
+  color: black;
+}
+
+.delete-message {
+  color: #dc3545;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.dark-mode .delete-message {
+  color: #dc3545;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.dark-mode .private-message-link {
   color: white;
 }

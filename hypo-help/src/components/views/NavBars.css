@@ -1,4 +1,4 @@
-.navbar {
+/*.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,6 +8,7 @@
   color: #333333;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-family: "Bungee Inline", cursive;
+  border-radius: 30px;
 }
 
 .dark-mode .navbar {
@@ -45,4 +46,79 @@
 
 .dark-mode .user-hello {
   color: white;
+} */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  list-style: none;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Bungee Inline", cursive;
+  border-radius: 30px;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 5px;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.dark-mode .navbar__link {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navbar__link:hover {
+  background-color: #f4eeff;
+}
+
+.dark-mode .navbar {
+  background-color: #000000;
+  color: white;
+}
+
+.dark-mode .navbar__link:hover {
+  background-color: #777777;
+}
+.dark-mode .user-hello {
+  color: white;
+}
+.fa-comment {
+  position: relative;
+  font-size: 22px; /* Adjust the font size as needed */
+}
+
+.fa-comment.has-messages {
+  color: red; /* Set the color of the icon to red */
+}
+
+.fa-layers-text {
+  /* Set the background color of the number */
+
+  color: red; /* Set the text color of the number */
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 3px;
+  font-family: sans-serif;
+
+  /* Adjust the padding as needed */
+
+  padding-right: 3px;
 }

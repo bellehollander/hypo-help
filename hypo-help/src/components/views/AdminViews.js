@@ -38,6 +38,7 @@ export const AdminViews = ({ isDarkMode }) => {
             path="customers/editEmail/:customerId"
             element={<EditEmail />}
           />
+
           <Route path="/" className="user-hello" element={<UserHello />} />
         </Routes>
 

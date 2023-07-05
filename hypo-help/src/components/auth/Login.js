@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import logo from "./hypoLogo2.png";
 
 export const Login = () => {
   const [email, set] = useState("");
@@ -35,10 +36,12 @@ export const Login = () => {
     <main className="container--login">
       <section>
         <form className="form--login" onSubmit={handleLogin}>
-          <h1> HYPO-HELP </h1>
-          <h2>Please sign in</h2>
+          <div className="hypo-image-login">
+            <img src={logo} alt="cloud-logo" />
+          </div>
+          <h2 className="sign-in">Please sign in</h2>
           <fieldset>
-            <label htmlFor="inputEmail"> Email address </label>
+            <label htmlFor="inputEmail">Email address</label>
             <input
               type="email"
               value={email}
@@ -53,11 +56,11 @@ export const Login = () => {
             <button type="submit" className="sign-in">
               Sign in
             </button>
+            <div className="link--register">
+              <Link to="/register">Not a member yet?</Link>
+            </div>
           </fieldset>
         </form>
-      </section>
-      <section className="link--register">
-        <Link to="/register">Not a member yet?</Link>
       </section>
     </main>
   );

@@ -9,7 +9,7 @@ export const SymptomSearch = ({ setTheTerms }) => {
           setTheTerms(changeEvnt.target.value);
         }}
         type="text"
-        placeholder="Enter your symptom"
+        placeholder="Search for a symptom..."
       />
     </div>
   );

@@ -1,0 +1,98 @@
+.doctor-list {
+  margin-top: 20px;
+}
+
+.doctor-card {
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #eef2f9;
+}
+.dark-mode .doctor-card {
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
+h3 {
+  margin: 0;
+  font-family: "Bungee Inline", cursive;
+}
+.dark-mode h3 {
+  margin: 0;
+  font-family: "Bungee Inline", cursive;
+  color: white;
+}
+
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Bungee Inline", cursive;
+}
+
+.address {
+  margin-bottom: 5px;
+}
+.dark-mode .address {
+  color: white;
+}
+
+.address-divider {
+  border-bottom: 1px solid #ccc;
+}
+.address-divider {
+  border-bottom: 1px solid #ccc;
+  color: white;
+}
+.search-btn {
+  background-color: black;
+  color: white;
+}
+.dark-mode .search-btn {
+  background-color: white;
+  color: black;
+}
+.dark-mode .doctor-header {
+  color: white;
+}
+.dark-mode .city {
+  color: white;
+}
+.dark-mode .street {
+  color: white;
+}
+.dark-mode .state {
+  color: white;
+}
+.dark-mode .postal {
+  color: white;
+}
+.dark-mode .label {
+  color: white;
+}
+
+.search-area {
+  background-color: #eef2f9; /* white border in light mode */
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.dark-mode .search-area {
+  background-color: black; /* black border in dark mode */
+}
+.search-area input {
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.search-btn {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+}

@@ -1,27 +1,33 @@
 .customer-profile {
-  border: 1px solid #ccc;
-
+  border-radius: 10px;
   padding: 16px;
   margin-bottom: 16px;
-  background-color: white;
-  transition: background-color 0.3s ease;
+  background-color: #eef2f9;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .customer-profile:hover {
-  background-color: #f4eeff;
+  background-color: #eef2f9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dark-mode .customer-profile {
   border: 1px solid black;
-
   padding: 16px;
   margin-bottom: 16px;
   background-color: black;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 .dark-mode .customer-profile:hover {
   background-color: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
 .customer-profile .name {
@@ -59,25 +65,74 @@
 .dark-mode .customer-title {
   color: white;
 }
-.dark-mode .name-edit {
-  color: white;
-}
-.dark-mode .email-edit {
-  color: white;
-}
-.form-group-customerEdit {
-  border-radius: 8px;
+
+.customer-edit-form {
+  border-radius: 10px;
   padding: 16px;
   margin-bottom: 16px;
-  background-color: #f4eeff;
+  background-color: #eef2f9;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.dark-mode .form-group-customerEdit {
-  border-radius: 8px;
+.customer-edit-form:hover {
+  background-color: #eef2f9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .customer-edit-form {
+  border: 1px solid black;
   padding: 16px;
   margin-bottom: 16px;
   background-color: black;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
+
+.dark-mode .customer-edit-form:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.customer-edit-form__title {
+  color: black;
+}
+
 .dark-mode .customer-edit-form__title {
   color: white;
+}
+
+.form-group-customerEdit {
+  margin-bottom: 16px;
+}
+
+.form-group-customerEdit label {
+  font-weight: bold;
+  color: black;
+}
+
+.dark-mode .form-group-customerEdit label {
+  color: white;
+}
+
+.form-group-customerEdit textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .form-group-customerEdit textarea {
+  background-color: white;
+  color: black;
+}
+
+.customer-edit-form__fieldset {
+  border: none;
 }
